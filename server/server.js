@@ -14,16 +14,24 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.use('/assets', express.static(path.resolve(__dirname, '../assets')));
-
+const players = [];
 // Run Socket
 io.on('connection', (socket) => {
-  console.log('New ws Coonnection');
+  console.log('New WS Connection LETS GO');
   // Welcome current user
-  socket.emit('message', 'Wlcome to What The Gif ?!');
+  socket.emit('message', 'Welcome to What The Gif ?!');
   // listen for msg from client
-  socket.on('message', ({ name, message }) => {
-    io.emit('message', { name, message });
-  });
+  // socket.on('message', ({ name, message }) => {
+  //   io.emit('message', { name, message });
+  // });
+  socket.on('newPlayer', (name) => {
+    let player = {name: name, score: 0, socketid: socket.id};
+    players.push(player);
+    console.log(players)
+    console.log(socket.id)
+    socket.emit('redirect', '/game')
+    io.emit('newJudge', players[0].socketid);
+  })
 });
 
 // route handler to respond with main app

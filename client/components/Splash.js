@@ -1,28 +1,23 @@
 import React, { useState, useRef, useContext } from 'react';
-// import SocketContext from '../context/SocketContext';
+import SocketContext from '../context/SocketContext';
 
 const SplashPage = () => {
-  const [state, setState] = useState({ username: '' });
-  const [nameData, setNameData] = useState([]);
+  const [name, setName] = useState('');
+  // const [nameData, setNameData] = useState([]);
+  const socket = useContext(SocketContext);
+  
+
   const onTextChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    });
-
-    // const newArr = [...nameData];
-    // newArr.push(e.target.value);
-    // // console.log(newArr);
-    // setNameData(newArr);
+    setName(e.target.value)
   };
-  const onSubmit = (e) => {
-    const newArr = [...nameData];
-    newArr.push(e);
-    setNameData(newArr);
+  
+  const onSubmit = () => {
+    socket.emit('newPlayer', name);
+    console.log(socket.id)
   };
 
-  console.log(nameData);
-  console.log(state.username);
+  // console.log(nameData);
+  console.log(name);
   return (
     <div className="SplashMain">
       <img alt="logo" src="../assets/img/whatthegif.png" />
@@ -36,7 +31,7 @@ const SplashPage = () => {
       />
       <button
         className="enterUsername"
-        onClick={() => onSubmit(state.username)}
+        onClick={onSubmit}
       >
         Enter The Danger Zone!
       </button>

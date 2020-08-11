@@ -13,6 +13,8 @@ const io = socketio(server);
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
+app.use('/assets', express.static(path.resolve(__dirname, '../assets')));
+
 // Run Socket
 io.on('connection', (socket) => {
   console.log('New ws Coonnection');

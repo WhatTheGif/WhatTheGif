@@ -19,8 +19,8 @@ io.on('connection', (socket) => {
   // Welcome current user
   socket.emit('message', 'Wlcome to What The Gif ?!');
   // listen for msg from client
-  socket.on('clientMsg', (msg) => {
-    io.emit('message', formatMessage('USER', msg));
+  socket.on('message', ({ name, message }) => {
+    io.emit('message', { name, message });
   });
 });
 

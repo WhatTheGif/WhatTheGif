@@ -1,19 +1,27 @@
-import React from 'react';
-import UserScore from './UserScore'
+import React, { useState, useContext } from 'react';
+import UserScore from './UserScore';
+import SocketContext from '../context/SocketContext';
 
 const ScoreBoard = () => {
-  //fetch request to backend, for array of all players and their scores
-  const playerScores = [{name: 'JEHO', score: 5}, {name: 'Cyn', score: 6}, {name: 'Besik', score: 6}, {name: 'Roseanne', score: 4},];
-  
+  const socket = useContext(SocketContext);
+  const [playersScores, setPlayersScores] = useState([]);
+
+  socket.on('updateScores', (players) => {
+    setPlayersScores(players);
+  });
+
   const userScores = [];
-  for(let i = 0; i < playerScores.length; i += 1){
-    const player = playerScores[i];
-    userScores.push(<UserScore key={`UserName-${i}`} userName={player.name} userScore={player.score}/>) 
+  for (let i = 0; i < playersScores.length; i += 1) {
+    const player = playersScores[i];
+    userScores.push(
+      <UserScore key={`UserName-${i}`} userName={player.name} userScore={player.score} />
+    );
   }
-  
+
   return (
-    <div>
-      { userScores } 
+    <div id="scoreboard">
+      <h3>Scoreboard</h3>
+      {userScores}
     </div>
   );
 };

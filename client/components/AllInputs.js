@@ -1,19 +1,20 @@
-import React from "react";
-import Submission from './Submission'
+import React from 'react';
+import Submission from './Submission';
 
-const AllInputs = () => {
-  //fetch request to the server to get responses that each player submitted
-  const input = [
-    { name: "JEHO", input: "lalala" },
-    { name: "JEHO", input: "lalala" },
-  ];
-  const inputs = [];
-
-  for (let i = 0; i < input.length; i++) {
-    const eachInput = input[i];
-    inputs.push(<Submission key={`str-${i}`} input={eachInput.input} />);
+const AllInputs = (props) => {
+  const submissionInstances = [];
+  for (let i = 0; i < props.inputs.length; i++) {
+    const input = props.inputs[i];
+    submissionInstances.push(
+      <Submission
+        key={`str-${i}`}
+        input={input.input}
+        playerIndex={input.index}
+        isJudge={props.isJudge}
+      />
+    );
   }
-  return <div>{inputs}</div>;
+  return <div>{submissionInstances}</div>;
 };
 
 export default AllInputs;

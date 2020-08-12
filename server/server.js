@@ -1,12 +1,18 @@
 const express = require('express');
+
 const app = express();
 const path = require('path');
+
 const PORT = 3333;
 const { createServer } = require('http');
+
 const server = createServer(app);
 const socketio = require('socket.io');
+
 const io = socketio(server);
 const superagent = require('superagent');
+const dotenv = require('dotenv').config();
+
 /**
  * handle parsing request body
  */
@@ -19,17 +25,17 @@ let players = [];
 let roundInputs = [];
 let currentJudgeIndex = 0;
 let currGif = '';
-
+const { API_KEY } = process.env;
+console.log(process.env.API_KEY);
+console.log(API_KEY);
 superagent
   .get('api.giphy.com/v1/gifs/random')
-  .query({ api_key: 'TmN9ppBY989puNU9lg6TpgTH4VpGjOWg' })
+  .query({ api_key: API_KEY })
   .end((err, res) => {
     if (err) {
       return console.log('err', err);
     }
-    console.log(res.body);
     currGif = res.body.data.image_url;
-    console.log(currGif);
   });
 
 // Run Socket

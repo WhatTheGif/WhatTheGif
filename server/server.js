@@ -113,7 +113,7 @@ io.on('connection', (socket) => {
         const currentJudge = players[currentJudgeIndex];
         io.emit('newJudge', { name: currentJudge.name, index: currentJudgeIndex, currGif });
       }
-    }, 10000);
+    }, 1000);
   });
 });
 

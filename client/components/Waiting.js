@@ -3,7 +3,7 @@ import React from 'react';
 const Waiting = () => {
   return (
     <div>
-      <img src='../../assets/img/waitingforlegends.png' />     
+      <img src="../../assets/img/waitingforlegends.png" />
     </div>
   );
 };

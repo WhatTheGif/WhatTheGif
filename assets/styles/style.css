@@ -1,3 +1,44 @@
-/* .SplashMain {
-  background-color: brown;
-} */
+body {
+  background-color: rgb(252, 210, 93);
+  text-align: center;
+  border: 10px black;
+}
+
+#app {
+  background-color: tomato;
+  margin: 10%;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#scoreboard {
+  background-color: rgb(72, 226, 141);
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  height: 80%;
+  width: 15%;
+  padding: 8px;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.response {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgb(159, 171, 194);
+}

@@ -80,9 +80,9 @@ const MainGame = () => {
   return (
     <div>
       <div>
-        <h1>Hello {JSON.stringify(player)}</h1>
+        <h1>The Legendary {player.name}</h1>
         <img className="gif" src={currGif}></img>
-        <h3>Current Judge: {currJudge}</h3>
+        <h2>Current Judge: {currJudge}</h2>
       </div>
       <ScoreBoard />
       {currentView}

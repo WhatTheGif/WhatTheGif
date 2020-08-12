@@ -13,7 +13,7 @@ const Submission = (props) => {
 
   return (
     <div className="response">
-      <span>{props.input}</span>
+      <span id='input'>{props.input}</span>
       {props.isJudge && <button onClick={onChosen}>Give this your LOLs</button>}
     </div>
   );

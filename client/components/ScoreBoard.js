@@ -20,7 +20,7 @@ const ScoreBoard = () => {
 
   return (
     <div id="scoreboard">
-      <h3>Scoreboard</h3>
+      <h3 id='scoreName'>Scoreboard</h3>
       {userScores}
     </div>
   );

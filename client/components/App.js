@@ -29,7 +29,11 @@ const App = () => {
 
   let currentView;
   if (gameOn) {
-    currentView = <MainGame />;
+    currentView = 
+    (<div>
+      <img alt="logo" src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png" height='100px' />
+      <MainGame />
+      </div>);
   } else if (gameEnd) {
     currentView = <EndGame winner={winner} />;
   } else {

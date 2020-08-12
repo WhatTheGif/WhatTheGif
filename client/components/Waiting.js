@@ -3,7 +3,7 @@ import React from 'react';
 const Waiting = () => {
   return (
     <div>
-      <img src="../../assets/img/waitingforlegends.png" />
+      <img src="https://fontmeme.com/permalink/200812/67221ef153feac0cbf8b97ece5fd492a.png" />
     </div>
   );
 };

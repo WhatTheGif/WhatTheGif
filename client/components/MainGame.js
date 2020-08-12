@@ -81,7 +81,7 @@ const MainGame = () => {
     <div>
       <div>
         <h1>Hello {JSON.stringify(player)}</h1>
-        <img src={currGif}></img>
+        <img className="gif" src={currGif}></img>
         <h3>Current Judge: {currJudge}</h3>
       </div>
       <ScoreBoard />

@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production nodemon server/server.js",
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack-dev-server --open & nodemon server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,10 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.3.0",
     "nodemon": "^2.0.4",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",

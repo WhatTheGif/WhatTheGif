@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://i.pinimg.com/originals/f2/f5/13/f2f513ded2eca406b32c468ffd961614.jpg');
+  background-image: url("https://i.pinimg.com/originals/f2/f5/13/f2f513ded2eca406b32c468ffd961614.jpg");
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 #scoreboard {
-  background-image: url('https://i.pinimg.com/originals/f2/f5/13/f2f513ded2eca406b32c468ffd961614.jpg');
+  background-image: url("https://i.pinimg.com/originals/f2/f5/13/f2f513ded2eca406b32c468ffd961614.jpg");
   position: fixed;
   right: 0;
   top: 10%;
@@ -74,6 +74,13 @@ button {
   padding: 2px 0;
   font-weight: bold;
   color: black;
+}
+
+.oauth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 input {

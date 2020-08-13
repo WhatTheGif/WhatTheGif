@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SplashPage from './Splash';
 // const dotenv = require('dotenv').config();
 const { REACT_APP_CLIENT_ID } = process.env;
-console.log(process.env.REACT_APP_CLIENT_ID);
+// console.log(process.env.REACT_APP_CLIENT_ID);
 
 const GoogleOAuth = () => {
   const [google, setgoogle] = useState(false);
@@ -33,7 +33,16 @@ const GoogleOAuth = () => {
     script.src = 'https://apis.google.com/js/platform.js';
     script.onload = () => initializeGoogleSignIn();
     document.body.appendChild(script);
-    currentView = <div className="g-signin2" data-onsuccess="onSignIn"></div>;
+    currentView = (
+      <div className="oauth">
+        <img
+          alt="logo"
+          src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png"
+          width="100%"
+        />
+        <div className="g-signin2" data-onsuccess="onSignIn"></div>
+      </div>
+    );
   }
   return <div>{currentView}</div>;
 };

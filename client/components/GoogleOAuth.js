@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SplashPage from './Splash';
-const { CLIENT_ID } = process.env;
+// const dotenv = require('dotenv').config();
+const { REACT_APP_CLIENT_ID } = process.env;
+console.log(process.env.REACT_APP_CLIENT_ID);
 
 const GoogleOAuth = () => {
   const [google, setgoogle] = useState(false);
@@ -8,7 +10,7 @@ const GoogleOAuth = () => {
     window.gapi.load('auth2', () => {
       window.gapi.auth2
         .init({
-          client_id: CLIENT_ID,
+          client_id: REACT_APP_CLIENT_ID,
         })
         .then(() => {
           const authInstance = window.gapi.auth2.getAuthInstance();
@@ -22,6 +24,7 @@ const GoogleOAuth = () => {
     });
   }
 
+  document.getElementsByTagName('meta')[2].content = REACT_APP_CLIENT_ID;
   let currentView;
   if (google.isSignedIn === true) {
     currentView = <SplashPage />;

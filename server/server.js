@@ -129,7 +129,7 @@ io.on('connection', (socket) => {
           currGif,
         });
       }
-    }, 1000);
+    }, 5000);
   });
 });
 

@@ -11,7 +11,7 @@ A fun multipler online game to provide lots of laughs and bonding time.
 
 # Views
 
-<center>
+<p align="center">
 <img src="./DOCUMENTATION/img/Splash.png" width = 600px>
 &nbsp;<br />
 <img src="./DOCUMENTATION/img/JudgeWaiting.png" width = 600px>
@@ -19,4 +19,4 @@ A fun multipler online game to provide lots of laughs and bonding time.
 <img src="./DOCUMENTATION/img/Judging.png" width = 600px>
 &nbsp;<br />
 <img src="./DOCUMENTATION/img/Input.png" width = 600px>
-</center>
+</p>

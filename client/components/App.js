@@ -35,7 +35,7 @@ const App = () => {
         <img
           alt="logo"
           src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png"
-          height="100px"
+          width="80%"
         />
         <MainGame />
       </div>

@@ -10,14 +10,14 @@ body {
 
 #app {
   background-color: rgb(255, 255, 255);
-  margin: 10%;
+  margin: 15%;
   min-height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 10px solid black;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 0.7vw;
   color: black;
 }
 
@@ -32,16 +32,22 @@ body {
   justify-content: center;
 }
 
+#splashUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #scoreboard {
   background-image: url('https://i.pinimg.com/originals/f2/f5/13/f2f513ded2eca406b32c468ffd961614.jpg');
   position: fixed;
-  right: 5%;
-  top: 5%;
+  right: 0;
+  top: 10%;
   height: 80%;
   width: 15%;
   padding: 8px;
   border: 10px solid black;
-  font-size: 39px;
+  font-size: 1.3vw;
   font-weight: bold;
   border-radius: 20px;
 }
@@ -56,27 +62,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 10px;
   padding: 10px;
-  font-size: 30px;
+  font-size: 1.3vw;
 }
 
 button {
   border-radius: 5px;
   background-color: rgb(213, 157, 247);
-  width: 200px;
-  height: 50px;
+  width: 20%;
+  padding: 2px 0;
   font-weight: bold;
   color: black;
 }
 
 input {
   border-radius: 5px;
-  width: 200px;
-  height: 44px;
+  width: 20%;
+  padding: 1% 0;
   font-weight: bold;
 }
 
@@ -92,13 +95,13 @@ input {
   background-color: rgb(200, 242, 200);
 }
 
-#input {
+#finalInput {
   margin-right: 5px;
   background-color: rgb(200, 242, 200);
-  width: 200px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 15px;
+  width: 37%;
 }

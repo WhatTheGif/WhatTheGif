@@ -17,7 +17,7 @@ body {
   align-items: center;
   border: 10px solid black;
   border-radius: 50px;
-  font-size: .7vw;
+  font-size: 0.7vw;
   color: black;
 }
 
@@ -50,7 +50,6 @@ body {
   font-size: 1.3vw;
   font-weight: bold;
   border-radius: 20px;
-  
 }
 
 .score {
@@ -72,7 +71,7 @@ button {
   border-radius: 5px;
   background-color: rgb(213, 157, 247);
   width: 20%;
-  padding: 2px 0; 
+  padding: 2px 0;
   font-weight: bold;
   color: black;
 }
@@ -80,7 +79,7 @@ button {
 input {
   border-radius: 5px;
   width: 20%;
-  padding: 1% 0; 
+  padding: 1% 0;
   font-weight: bold;
 }
 

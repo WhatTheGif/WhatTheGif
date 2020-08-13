@@ -1,6 +1,6 @@
 # WhatTheGif
 
-A fun multipler online game to provide lots of laughs and bonding time.
+A fun multiplayer online game to provide lots of laughs and bonding time.
 
 # Tech Stack
 

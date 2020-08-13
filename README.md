@@ -1,1 +1,22 @@
 # WhatTheGif
+
+A fun multipler online game to provide lots of laughs and bonding time.
+
+# Tech Stack
+
+- OAuth 2.0 with Google
+- React Context API and Hooks (useState, useContext)
+- WebSockets
+- Webpack
+
+# Views
+
+<p align="center">
+<img src="./DOCUMENTATION/img/Splash.png" width = 600px>
+&nbsp;<br />
+<img src="./DOCUMENTATION/img/JudgeWaiting.png" width = 600px>
+&nbsp;<br />
+<img src="./DOCUMENTATION/img/Judging.png" width = 600px>
+&nbsp;<br />
+<img src="./DOCUMENTATION/img/Input.png" width = 600px>
+</p>

@@ -13,14 +13,23 @@ const SplashPage = () => {
     socket.emit('newPlayer', name);
   };
 
-  console.log(name);
+  // console.log(name);
   return (
     <div className="splash-container">
-      <img alt="logo" src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png" height='150px' />
-      <h1 id='subheader'>Gif(gif) OR Gif(jif) Edition!!</h1>
+      <img
+        alt="logo"
+        src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png"
+        height="150px"
+      />
+      <h1 id="subheader">Gif(gif) OR Gif(jif) Edition!!</h1>
       <label>Enter Username:</label>
       <div>
-        <input type="text" id="username" name="username" onChange={(e) => onTextChange(e)} />
+        <input
+          type="text"
+          id="username"
+          name="username"
+          onChange={(e) => onTextChange(e)}
+        />
         <button className="enterUsername" onClick={onSubmit}>
           Enter The Danger Zone!
         </button>

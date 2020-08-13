@@ -26,8 +26,7 @@ let roundInputs = [];
 let currentJudgeIndex = 0;
 let currGif = '';
 const { API_KEY } = process.env;
-console.log(process.env.API_KEY);
-console.log(API_KEY);
+
 superagent
   .get('api.giphy.com/v1/gifs/random')
   .query({ api_key: API_KEY })
@@ -63,7 +62,11 @@ io.on('connection', (socket) => {
 
     // Tell all users who the judge is
     const currentJudge = players[currentJudgeIndex];
-    io.emit('newJudge', { name: currentJudge.name, index: currentJudgeIndex, currGif });
+    io.emit('newJudge', {
+      name: currentJudge.name,
+      index: currentJudgeIndex,
+      currGif,
+    });
   });
 
   // Listen for user input for each game round
@@ -87,7 +90,10 @@ io.on('connection', (socket) => {
     const winningPlayer = winningPlayerObj.name;
 
     // Inform all players who won the round
-    const winningInput = { player: winningPlayer, winningPhrase: roundWinner.winningPhrase };
+    const winningInput = {
+      player: winningPlayer,
+      winningPhrase: roundWinner.winningPhrase,
+    };
     io.emit('roundWinnerChosen', winningInput);
 
     // Update score board for all users
@@ -117,7 +123,11 @@ io.on('connection', (socket) => {
         currentJudgeIndex += 1;
         if (currentJudgeIndex > players.length - 1) currentJudgeIndex = 0;
         const currentJudge = players[currentJudgeIndex];
-        io.emit('newJudge', { name: currentJudge.name, index: currentJudgeIndex, currGif });
+        io.emit('newJudge', {
+          name: currentJudge.name,
+          index: currentJudgeIndex,
+          currGif,
+        });
       }
     }, 1000);
   });

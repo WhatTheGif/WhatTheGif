@@ -1,6 +1,6 @@
 # WhatTheGif
 
-A fun multiplayer online game to provide lots of laughs and bonding time.
+A fun multiplayer online game to provide lots of laughs and bonding time. Write the funniest phrase for a random gif and make your friends laugh out loud.
 
 # Tech Stack
 

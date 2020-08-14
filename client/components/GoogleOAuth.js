@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import SplashPage from './Splash';
-// const dotenv = require('dotenv').config();
 const { REACT_APP_CLIENT_ID } = process.env;
-// console.log(process.env.REACT_APP_CLIENT_ID);
 
 const GoogleOAuth = () => {
   const [google, setgoogle] = useState(false);

@@ -29,18 +29,20 @@ A fun multiplayer online game to provide lots of laughs and bonding time. Write 
 
 # Instructions to play over the same WiFi:
 
-1. Add .env file in root directory and include the following key-value pairs
+1. Fork and Clone repo locally
+2. Add .env file in root directory and include the following key-value pairs
 
    - API_KEY= "YOUR GIPHY API KEY"
    - REACT_APP_CLIENT_ID= "YOUR GOOGLE CLIENT ID for OAuth - not necessary if GoogleOAuth page is not rendered"
    - NODE_ENV=production
 
-2. Find your computer's IPAddress (IPv4) (Check out this link to go to your network - https://osxdaily.com/2011/10/05/find-router-ip-address-mac/)
-3. In index.js update the socket io connection argument (line 9) to <code>'YourIPAddress':3333</code>
-4. <code>npm install</code>
-5. <code>npm run build</code>
-6. <code>npm start</code>
-7. On a different computer's browser, go to <code>'YourIPAddress':3333</code>
+3. Find your computer's IPAddress (IPv4) (Check out this link to go to your network - https://osxdaily.com/2011/10/05/find-router-ip-address-mac/)
+4. In index.js update the socket io connection argument (line 9) to <code>'YourIPAddress':3333</code>
+5. <code>npm install</code>
+6. <code>npm run build</code>
+7. <code>npm start</code>
+8. On a different computer's browser, go to <code>'YourIPAddress':3333</code>
+9. HAVE FUN! and come back to star our repo :star:
 
 # Views
 

@@ -13,11 +13,11 @@ A fun multiplayer online game to provide lots of laughs and bonding time. Write 
 
 1. Fork and Clone repo locally
 2. Add .env file in root directory and include the following key-value pairs
-
+   <code>
    - API_KEY= "YOUR GIPHY API KEY"
    - REACT_APP_CLIENT_ID= "YOUR GOOGLE CLIENT ID for OAuth - not necessary if GoogleOAuth page is not rendered"
    - NODE_ENV=production
-
+     </code>
 3. <code>npm install</code>
 4. <code>npm run build</code>
 5. Start a Live Share session on VS Code
@@ -31,11 +31,11 @@ A fun multiplayer online game to provide lots of laughs and bonding time. Write 
 
 1. Fork and Clone repo locally
 2. Add .env file in root directory and include the following key-value pairs
-
+   <code>
    - API_KEY= "YOUR GIPHY API KEY"
    - REACT_APP_CLIENT_ID= "YOUR GOOGLE CLIENT ID for OAuth - not necessary if GoogleOAuth page is not rendered"
    - NODE_ENV=production
-
+     </code>
 3. Find your computer's IPAddress (IPv4) (Check out this link to go to your network - https://osxdaily.com/2011/10/05/find-router-ip-address-mac/)
 4. In index.js update the socket io connection argument (line 9) to <code>'YourIPAddress':3333</code>
 5. <code>npm install</code>

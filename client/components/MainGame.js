@@ -23,7 +23,6 @@ const MainGame = () => {
 
   // Listen for updates about who the judge of round is
   socket.on('newJudge', (judge) => {
-    console.log(`The judge index is currently`, judge.index);
     // Update judge's name on screen
     setCurrJudge(judge.name);
     // Update Gif on screen

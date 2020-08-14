@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import SocketContext from '../context/SocketContext';
-// import Splash from './Splash';
+import Splash from './Splash';
 import MainGame from './MainGame';
 import EndGame from './EndGame';
 import PlayerContext from '../context/PlayerContext';
@@ -43,8 +43,8 @@ const App = () => {
   } else if (gameEnd) {
     currentView = <EndGame winner={winner} />;
   } else {
-    // currentView = <Splash />;
-    currentView = <GoogleOAuth />;
+    currentView = <Splash />;
+    // currentView = <GoogleOAuth />;
   }
 
   return (

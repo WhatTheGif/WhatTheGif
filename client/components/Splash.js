@@ -3,36 +3,31 @@ import SocketContext from '../context/SocketContext';
 
 const SplashPage = () => {
   const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
   const socket = useContext(SocketContext);
 
-  const onTextChange = (e) => {
+  const onRoomTextChange = (e) => {
+    setRoom(e.target.value);
+  };
+
+  const onNameTextChange = (e) => {
     setName(e.target.value);
   };
 
-  const onSubmit = () => {
-    socket.emit('newPlayer', name);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!room || !name) return;
+    socket.emit('newPlayer', { room, name });
   };
 
   return (
-    <div className="splash-container">
-      <img
-        alt="logo"
-        src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png"
-        width="100%"
-      />
-      <h1 id="subheader">Gif(gif) OR Gif(jif) Edition!!</h1>
-      <h2>Enter Username:</h2>
-      <div id="splashUser">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          onChange={(e) => onTextChange(e)}
-        />
-        <button className="enterUsername" onClick={onSubmit}>
-          Enter The Danger Zone!
-        </button>
-      </div>
+    <div>
+      <br />
+      <form onSubmit={onSubmit}>
+        <input type="text" placeholder="Create/Join Room" onChange={(e) => onRoomTextChange(e)} />
+        <input type="text" placeholder="What's your name?" onChange={(e) => onNameTextChange(e)} />
+        <button type="submit">Enter The Danger Zone!</button>
+      </form>
     </div>
   );
 };

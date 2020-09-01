@@ -13,7 +13,6 @@ A fun multiplayer online game to provide lots of laughs and bonding time. Write 
 
 1. Fork and Clone repo locally
 2. Add .env file in root directory and include the following key-value pairs
-   - `NODE_ENV=production`
    - `API_KEY= <YOUR GIPHY API KEY>`
    - `REACT_APP_CLIENT_ID= <YOUR GOOGLE OAUTH CLIENT ID>`
      - (not necessary if GoogleOAuth is not rendered)
@@ -30,7 +29,6 @@ A fun multiplayer online game to provide lots of laughs and bonding time. Write 
 
 1. Fork and Clone repo locally
 2. Add .env file in root directory and include the following key-value pairs
-   - `NODE_ENV=production`
    - `API_KEY= <YOUR GIPHY API KEY>`
    - `REACT_APP_CLIENT_ID= <YOUR GOOGLE OAUTH CLIENT ID>`
      - (not necessary if GoogleOAuth is not rendered)

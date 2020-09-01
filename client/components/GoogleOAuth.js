@@ -33,11 +33,6 @@ const GoogleOAuth = () => {
     document.body.appendChild(script);
     currentView = (
       <div className="oauth">
-        <img
-          alt="logo"
-          src="https://fontmeme.com/permalink/200812/494bb6ee41bd84762de732c77da6bd2f.png"
-          width="100%"
-        />
         <div className="g-signin2" data-onsuccess="onSignIn"></div>
       </div>
     );

@@ -20,7 +20,6 @@ module.exports = (env) => {
       publicPath: '/',
       filename: 'bundle.js',
     },
-    devtool: 'eval-source-map',
     mode: env.NODE_ENV,
     devServer: {
       host: 'localhost',

@@ -69,7 +69,7 @@ const MainGame = () => {
   } else if (viewInputs) {
     currentView = <AllInputs inputs={submittedInputs} isJudge={isJudge} />;
   } else if (isInputing) {
-    currentView = <SoloInput />;
+    currentView = <SoloInput judge={currJudge} />;
   } else {
     currentView = (
       <WinRound winningPhrase={roundWinner.winningPhrase} roundWinner={roundWinner.player} />
@@ -77,14 +77,22 @@ const MainGame = () => {
   }
 
   return (
-    <div>
+    <div className="page">
       <div>
-        <h1>The Legendary {player.name}</h1>
+        <h3>
+          <span className="purple-text">
+            Welcome to the '<span className="teal-text">{player.room}</span>' room, The Legendary{' '}
+            {player.name}
+          </span>
+        </h3>
         <img className="gif" src={currGif}></img>
-        <h2>Current Judge: {currJudge}</h2>
+        <h3>
+          The Current Judge is <span className="underline teal-text">{currJudge}</span>
+        </h3>
       </div>
-      <ScoreBoard />
       {currentView}
+      <br />
+      <ScoreBoard />
     </div>
   );
 };
